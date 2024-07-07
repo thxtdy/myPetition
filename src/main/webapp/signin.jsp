@@ -24,8 +24,9 @@
             <label for="userid">아이디</label>
             <input type="text" id="id" name="userid">
 
-            <button type="submit" id="check" form="check-form">중복 확인</button>
-            				<!-- Javascript 중복 확인 함수 -->
+            <!-- Javascript 중복 확인 함수 -->
+            <button type="submit" id="check" onclick="idDuplicate()">중복 확인</button>
+            				
             <label for="password">비밀번호</label>
             <input type="password" id="password" name="userpw">
 
@@ -35,14 +36,21 @@
 			<button type="submit" id="complete" >가입하기</button>
         </form>
         
-        <form id = "check-from" action="CheckServlet" method="get">
-            <input type="hidden" id="check-userid" name="userid">
-        
-        </form>
-        
     </div>
     
     <script type="text/javascript">
+    
+    function idDuplicate() {
+        var userid = document.getElementById('userid').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'CheckServlet?userid=' + encodeURIComponent(userid), true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById('check-result').innerText = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
     
     function openPopup() { 
         document.getElementById('popup').style.display = 'block'; 

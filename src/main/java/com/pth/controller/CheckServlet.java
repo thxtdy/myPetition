@@ -13,7 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.protocol.Resultset;
+
 
 /**
  * Servlet implementation class checkId
