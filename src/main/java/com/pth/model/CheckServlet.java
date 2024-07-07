@@ -1,4 +1,4 @@
-package com.pth.controller;
+package com.pth.model;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -32,7 +32,7 @@ public class CheckServlet extends HttpServlet {
 
 		String url = "jdbc:mysql://localhost:3306/jspservlet?serverTimezone=Asia/Seoul";
 		String username = "root";
-		String password = "asd123";
+		String password = "040220";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

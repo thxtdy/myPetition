@@ -1,4 +1,4 @@
-package com.pth.beans;
+package com.pth.model;
 
 import java.io.Serializable;
 

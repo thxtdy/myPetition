@@ -13,7 +13,7 @@
 <body>
     <div class="signup-container">
         <h2>회원가입</h2>
-        <form action="login.jsp" method="post">
+        <form action="" method="GET">
         
             <label for="username">사용자 이름</label>
             <input type="text" id="username" name="username">
@@ -25,7 +25,7 @@
             <input type="text" id="id" name="userid">
 
             <!-- Javascript 중복 확인 함수 -->
-            <button type="submit" id="check" onclick="idDuplicate()">중복 확인</button>
+            <button type="submit" id="check">중복 확인</button>
             				
             <label for="password">비밀번호</label>
             <input type="password" id="password" name="userpw">

@@ -1,4 +1,4 @@
-package com.pth.controller;
+package com.pth.model;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
