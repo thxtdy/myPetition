@@ -13,7 +13,7 @@
 <body>
     <div class="signup-container">
         <h2>회원가입</h2>
-        <form action="" method="GET">
+        <form action="SigninServlet" method="POST">
         
             <label for="username">사용자 이름</label>
             <input type="text" id="username" name="username">
@@ -37,29 +37,6 @@
         </form>
         
     </div>
-    
-    <script type="text/javascript">
-    
-    function idDuplicate() {
-        var userid = document.getElementById('userid').value;
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'CheckServlet?userid=' + encodeURIComponent(userid), true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                document.getElementById('check-result').innerText = xhr.responseText;
-            }
-        };
-        xhr.send();
-    }
-    
-    function openPopup() { 
-        document.getElementById('popup').style.display = 'block'; 
-    } 
-    function closePopup() { 
-        document.getElementById('popup').style.display = 'none';  
-    } 
-    
-    </script>
-    
+
 </body>
 </html>
